@@ -1,0 +1,8 @@
+clear
+echo " "
+echo " "
+echo Standalone Download for Chrome Installer
+echo " "
+echo " "
+curl -# https://dl.google.com/chrome/mac/universal/stable/GGRO/googlechrome.dmg > Downloads/googlechrome.dmg
+echo "Chrome Downloaded"

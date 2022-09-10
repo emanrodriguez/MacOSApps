@@ -1,0 +1,9 @@
+clear
+echo " "
+echo " "
+echo Standalone Download for Zoom
+echo " "
+echo " "
+echo Downloading Zoom...
+curl -# https://cdn.zoom.us/prod/5.11.11.10514/Zoom.pkg > Downloads/Zoom.pkg
+echo "Zoom Downloaded"

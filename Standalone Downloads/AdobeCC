@@ -1,0 +1,36 @@
+AppleSiliconInstallers() {
+	curl -# https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/5_8_0/macarm64/AdobeCCInstaller.dmg > Downloads/AdobeCCInstaller.dmg
+	echo ""
+	echo "Adobe Creative Cloud Downloaded"
+}
+
+IntelInstallers () {
+	curl -# https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/5_8_0/osx10/ACCCx5_8_0_592.dmg > Downloads/AdobeCCInstaller.dmg
+	echo ""
+	echo "Adobe Creative Cloud Downloaded"
+}
+
+dialogMenu () {
+    clear
+    echo " "
+    echo " "
+    echo "Standalone Download for Adobe Creative Cloud for $1"
+    echo " "
+    echo " "
+    echo "Downloading Adobe Creative Cloud ..."
+	echo ""
+}
+
+main () {
+	return_var="$(sysctl -n machdep.cpu.brand_string)"
+    dialogMenu "$return_var"
+	if [[ $return_var =~ "Intel" ]]; then
+		IntelInstallers
+	else
+		AppleSiliconInstallers
+	fi
+	echo "Thanks for using the program!"
+	echo "Closing application in 5 seconds..."
+}
+main
+exit

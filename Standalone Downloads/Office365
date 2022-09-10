@@ -1,0 +1,9 @@
+clear
+echo " "
+echo " "
+echo Standalone Download for Microsoft Office Installer
+echo " "
+echo " "
+echo Downloading Microsoft Office Installer ...
+curl -# https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_16.64.22081401_BusinessPro_Installer.pkg > Downloads/Microsoft_Office_16.64.22081401_BusinessPro_Installer.pkg
+echo "Microsoft Office Installer Downloaded"
