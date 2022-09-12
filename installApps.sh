@@ -20,7 +20,7 @@ dialogMenu () {
 	echo "MacOS Quick Download Installer"
 	echo ""
 	echo "This bash program detects the chipset of this Mac"
-	echo "and downloads the comaptible installers."
+	echo "and downloads the compatible installers."
 	echo ""
 	echo "The following installers will be downloaded : "
 	echo "	1. Microsoft Office Installer"
