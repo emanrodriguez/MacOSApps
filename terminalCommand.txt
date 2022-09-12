@@ -1,0 +1,1 @@
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/emanrodriguez/MacOSApps/main/installApps.sh)”
