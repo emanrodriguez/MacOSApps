@@ -12,13 +12,12 @@ getConfirmation (){
 		YnAnswer=$(echo $YnAnswer | awk '{print tolower($0)}')
 	done
 }
-
+dock_item() {
+  printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>', "$1"
+}
+  
 dockChange (){
   defaults delete com.apple.dock persistent-apps
-
-  dock_item() {
-      printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>', "$1"
-  }
   defaults write com.apple.dock persistent-apps -array \
       "$(dock_item /System/Applications/Launchpad.app)" \
       "$(dock_item /System//Applications/Messages.app)" \
