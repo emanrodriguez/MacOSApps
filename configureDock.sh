@@ -1,3 +1,5 @@
+#!/bin/bash
+
 getConfirmation (){
   echo ""
 	YnAnswer="x"
