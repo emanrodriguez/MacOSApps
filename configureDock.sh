@@ -60,4 +60,3 @@ main (){
   fi
 }
 main
-exit
