@@ -46,12 +46,14 @@ dialog() {
     10. System Preferences"
   echo ""
 }
-
-clear
-dialog
-getConfirmation
-if [ "$YnAnswer" = "y" ]; then
-dockChange
-else
-echo "You selected no. Please return after apps are installed."
-fi
+main(){
+	clear
+	dialog
+	getConfirmation
+	if [ "$YnAnswer" = "y" ]; then
+		dockChange
+	else
+		echo "You selected no. Please return after apps are installed."
+	fi
+}
+main
