@@ -12,9 +12,9 @@ getConfirmation (){
 		YnAnswer=$(echo $YnAnswer | awk '{print tolower($0)}')
 	done
 }
-dock_item() {
-  printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$1</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-}
+#dock_item() {
+#  printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$1</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+#}
   
 dockChange (){
   defaults delete com.apple.dock persistent-apps
