@@ -36,7 +36,7 @@ dialog() {
   printf "The current apps on dock will be replaced by the following:\n1. Launchpad\n2. Messages\n3. Microsoft Outlook\n4. Microsoft Word\n5. Microsoft PowerPoint\n6. Microsoft Excel\n7. Zoom\n8. Calendar\n9. App Store\n10. System Preferences"
   echo ""
 }
-main(){
+main() {
 	clear
 	dialog
 	getConfirmation
