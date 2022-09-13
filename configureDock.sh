@@ -2,14 +2,13 @@
 
 getConfirmation() {
   echo ""
-	YnAnswer="x"
 	yesResponse="y"
 	local noResponse="n"
 	until [[ "$YnAnswer" == "$yesResponse" || "$YnAnswer" == "$noResponse" ]];
 	do
 		echo -n "Reply with 'y' only if you have all the apps listed otherwise reply with 'n' : "
 		read YnAnswer
-		YnAnswer=$(echo $YnAnswer | awk '{print tolower('$YnAsnwer')}')
+		YnAnswer=$(echo $YnAnswer | awk '{print tolower($0)}')
 	done
 }
 dock_item() {
@@ -39,7 +38,8 @@ dialog() {
 main() {
 	clear
 	dialog
-	getConfirmation
+	YnAnswer="x"
+	getConfirmation $YnAnswer
 	if [ "$YnAnswer" = "y" ]; then
 		dockChange
 	else
