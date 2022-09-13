@@ -7,7 +7,7 @@ getConfirmation (){
 	local noResponse="n"
 	until [[ "$YnAnswer" == "$yesResponse" || "$YnAnswer" == "$noResponse" ]];
 	do
-		printf -n "Reply with 'y' only if you have all the apps listed\notherwise reply with 'n' : "
+		echo -n "Reply with 'y' only if you have all the apps listed\notherwise reply with 'n' : "
 		read YnAnswer
 		YnAnswer=$(echo $YnAnswer | awk '{print tolower($0)}')
 	done
