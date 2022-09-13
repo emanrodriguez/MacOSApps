@@ -12,10 +12,9 @@ getConfirmation (){
 		YnAnswer=$(echo $YnAnswer | awk '{print tolower($0)}')
 	done
 }
-dock_itemn(){
+dock_item(){
       printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>', "$1"
-}
-  
+}  
 dockChange (){
   defaults delete com.apple.dock persistent-apps
   defaults write com.apple.dock persistent-apps -array \
@@ -31,9 +30,7 @@ dockChange (){
       "$(dock_item /System/Applications/"App Store".app)" \
       "$(dock_item /System/Applications/"System Preferences".app)"
   killall Dock
-
 }
-
 dialog (){
   echo "This script just reconfigures the Default Dock Apps"
   printf "The current apps on dock will be replaced by the following:
