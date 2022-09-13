@@ -9,12 +9,12 @@ getConfirmation() {
 	do
 		echo -n "Reply with 'y' only if you have all the apps listed otherwise reply with 'n' : "
 		read YnAnswer
-		YnAnswer=$(echo $YnAnswer | awk '{print tolower("$YnAsnwer")}')
+		YnAnswer=$(echo $YnAnswer | awk '{print tolower('$YnAsnwer')}')
 	done
 }
 dock_item() {
       printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>', "$1"
-}  
+}
 dockChange() {
   defaults delete com.apple.dock persistent-apps
   defaults write com.apple.dock persistent-apps -array \
