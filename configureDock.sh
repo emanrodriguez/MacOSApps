@@ -36,7 +36,6 @@ dockChange (){
 
 dialog (){
   echo "This script just reconfigures the Default Dock Apps"
-  echo
   printf "The current apps on dock will be replaced by the following:
     1. Launchpad
     2. Messages
