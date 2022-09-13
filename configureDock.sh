@@ -33,17 +33,7 @@ dockChange() {
 }
 dialog() {
   echo "This script just reconfigures the Default Dock Apps"
-  printf "The current apps on dock will be replaced by the following:
-    1. Launchpad
-    2. Messages
-    3. Microsoft Outlook
-    4. Microsoft Word
-    5. Microsoft PowerPoint
-    6. Microsoft Excel
-    7. Zoom
-    8. Calendar
-    9. App Store
-    10. System Preferences"
+  printf "The current apps on dock will be replaced by the following:\n1. Launchpad\n2. Messages\n3. Microsoft Outlook\n4. Microsoft Word\n5. Microsoft PowerPoint\n6. Microsoft Excel\n7. Zoom\n8. Calendar\n9. App Store\n10. System Preferences"
   echo ""
 }
 main(){
