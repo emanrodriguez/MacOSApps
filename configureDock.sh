@@ -12,7 +12,7 @@ getConfirmation (){
 		YnAnswer=$(echo $YnAnswer | awk '{print tolower($0)}')
 	done
 }
-dock_item() {
+dock_itemn(){
       printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>', "$1"
 }
   
@@ -47,7 +47,7 @@ dialog (){
     8. Calendar
     9. App Store
     10. System Preferences"
-  echo
+  echo ""
 }
 main (){
   clear
