@@ -9,7 +9,7 @@ getConfirmation() {
 	do
 		echo -n "Reply with 'y' only if you have all the apps listed otherwise reply with 'n' : "
 		read YnAnswer
-		YnAnswer=$(echo $YnAnswer | awk '{print tolower($0)}')
+		YnAnswer=$(echo $YnAnswer | awk '{print tolower("$YnAsnwer")}')
 	done
 }
 dock_item() {
