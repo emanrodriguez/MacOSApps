@@ -62,5 +62,4 @@ main (){
     echo "You selected no. Please return after apps are installed."
   fi
 }
-
 main
